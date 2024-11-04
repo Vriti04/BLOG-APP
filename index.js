@@ -7,6 +7,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 app.use(cookieParser());
 
+const { readBlogs, writeBlogs } = require('./blogs.js');  
+
 let isAdmin = false;
 const JWT_SECRET_KEY = "vritijaitley";
 
@@ -136,7 +138,6 @@ app.post("/admin", authenticateToken, async (req,res)=>{
     }
 });
 
-const { readBlogs, writeBlogs } = require('./blogs.js');  // Assume blogs.js handles reading/writing blog data
 
 // Create a new blog post
 app.post("/blogs", authenticateToken, (req, res) => {
@@ -184,7 +185,6 @@ app.get("/blogs/:id", (req, res) => {
     res.json(blog);
 });
 
-// Update a blog post by ID (only author or admin can update)
 app.put("/blogs/:id", authenticateToken, (req, res) => {
     const blogId = parseInt(req.params.id, 10);
     const { title, content } = req.body;
