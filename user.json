@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "username": "vansh tomer",
+    "password": "$2b$10$bhh6CEsLbXOMQX3PwFhvqOuhtIH09aJN8Onos6h.gRYn.vzNy/8Gy",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "username": "vriti",
+    "password": "$2b$10$Cd3WUARUdugZoOHnIkFt1.6WczwoChPASfBI3rFn0afW0.YQGqHH6",
+    "role": "user"
+  },
+  {
+    "id": 3,
+    "username": "ridhima",
+    "password": "$2b$10$UxEaplrozU5QikP9Nf2G6uI0g1cw4zx.sk.nNlrHZfMn7j7XbwyoC",
+    "role": "admin"
+  }
+]
